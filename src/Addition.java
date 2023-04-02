@@ -9,10 +9,12 @@ public class Addition //extends UnicastRemoteObject
 	public Addition () {      
 	}
  
-      public int add(Object a, int b)  {
-    	  int result= 1+20;//a.number+b;
-    	  System.out.println(a);
-    	  System.out.print(a.getClass());
+      public int add(Object a)  {
+    	  NumberPair b = (NumberPair)a;
+    	  int result = b.number1 + b.number2;
+    	  
+    	  //System.out.println(a);
+    	  //System.out.print(a.getClass());
     
     	  return result;
       }
